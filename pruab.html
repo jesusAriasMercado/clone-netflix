@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        #popup {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+    }
+    </style>
+
+</head>
+<body>
+    <img src="imagen.PNG" alt="Descripción de la imagen" onmouseover="mostrarPopup(this)">
+    <div id="popup" style="display:none;">
+        <p>Información adicional sobre la imagen.</p>
+        <p>Puedes agregar más detalles aquí.</p>
+    </div>
+    <script>
+        function mostrarPopup(img) {
+  var popup = document.getElementById("popup");
+  popup.style.display = "block";
+  popup.style.left = img.offsetLeft + img.width + 10 + "px";
+  popup.style.top = img.offsetTop + "px";
+}
+
+function ocultarPopup() {
+  document.getElementById("popup").style.display = "none";
+}
+    </script>
+</body>
+</html>

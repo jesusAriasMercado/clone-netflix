@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        .padre {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .arriba img {
+            max-width: 160px;
+        }
+
+        .log {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        .log input {
+            width: 80%;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .boton1 {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .boton {
+            width: 60%;
+            padding: 17px;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background-color: darkred;
+        }
+
+        .text2 {
+            margin-top: 20px;
+            font-size: 25px;
+        }
+
+        .red {
+            color: red;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="padre">
+        <div class="arriba">
+            <img src="logos_netflixaaa.png" alt="Logo">
+        </div>
+        <div class="log">
+            <input id="usuario" type="text" placeholder="Ingresa tu email">
+            <input id="contraseña" type="password" placeholder="Contraseña">
+        </div>
+        <div class="boton1">
+            <input class="boton" type="button" value="Iniciar Sesión">
+        </div>
+        <div class="text2">
+            <h6>No tienes cuenta aun? <span class="red">Crear cuenta</span></h6>
+        </div>
+    </div>
+
+    <script>
+        const usuario = $("#usuario");
+        const contraseña = $("#contraseña");
+        const boton = $(".boton");
+
+        const usuarioRegistrado = "admin@gmail.com";
+        const ContraseñaRegistrada = "hola12345";
+
+        boton.click(function () {
+            const valor1 = usuario.val();
+            const valor2 = contraseña.val();
+
+            console.log(valor1, valor2);
+
+            if (valor1 == usuarioRegistrado && valor2 == ContraseñaRegistrada) {
+                alert("Puede pasar");
+                window.location.href = "netflix2.html";
+            } else {
+                alert("No puede pasar");
+            }
+        });
+    </script>
+</body>
+</html>
